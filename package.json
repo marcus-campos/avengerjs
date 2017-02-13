@@ -1,22 +1,17 @@
 {
-  "name": "plug-mail",
+  "name": "plugframework",
   "version": "0.0.1",
-  "description": "Microservice email for PlugApps Apps.",
-  "main": "index.js",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./bin/www"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://bitbucket.org/plugapps/plugmail.git"
-  },
-  "keywords": [
-    "mail",
-    "microservice",
-    "plug",
-    "PlugApps"
-  ],
-  "author": "campos.v.marcus@gmail.com",
-  "license": "ISC",
-  "homepage": "https://bitbucket.org/plugapps/plugmail#readme"
+  "dependencies": {
+    "body-parser": "~1.16.0",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.0",
+    "express": "~4.14.1",
+    "jade": "~1.11.0",
+    "morgan": "~1.7.0",
+    "serve-favicon": "~2.3.2"
+  }
 }
