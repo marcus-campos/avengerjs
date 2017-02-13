@@ -1,0 +1,22 @@
+{
+  "name": "plug-mail",
+  "version": "0.0.1",
+  "description": "Microservice email for PlugApps Apps.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://bitbucket.org/plugapps/plugmail.git"
+  },
+  "keywords": [
+    "mail",
+    "microservice",
+    "plug",
+    "PlugApps"
+  ],
+  "author": "campos.v.marcus@gmail.com",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/plugapps/plugmail#readme"
+}
