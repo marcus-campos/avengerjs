@@ -4,34 +4,13 @@
 First download the base
 
 ```
-wget https://github.com/marcus-campos/avengerjs/archive/master.zip
+wget https://github.com/marcus-campos/avengerjs/archive/v0.0.3.tar.gz
 ```
 
 Extract base files
 
 ```
-tar -zxvf master.tar.gz
-```
-
-Run the npm install
-
-```
-npm install
-```
-
-Now let's code :)
-
-### v0.0.1
-First download the base
-
-```
-wget https://bitbucket.org/plugapps/plugframework/get/v0.0.1.tar.gz
-```
-
-Extract base files
-
-```
-tar -zxvf v0.0.1.tar.gz
+tar -zxvf v0.0.3.tar.gz
 ```
 
 Run the npm install
