@@ -17,9 +17,7 @@ const appConfig    = require('./config/app')
 const providersDir = __dirname + appConfig('providers'); // Path
 
 const helmetProvider = require(providersDir + 'HelmetProvider')
-
-// Routes requires
-const index        = require('./app/Http/routes/index')
+const routesProvider = require(providersDir + 'RoutesProvider')
 
 // App
 let app          = express()
@@ -39,10 +37,7 @@ app.use(helmet())
 
 //Set providers
 app = helmetProvider(app) //Helmet
-
-// Routes use
-app.use('/', index)
-
+app = routesProvider(app)
 
 // Catch 404 and forward to error handler
 app.use((req, res, next) => {
