@@ -1,6 +1,6 @@
 {
-  "name": "plugframework",
-  "version": "0.0.1",
+  "name": "larexpress",
+  "version": "0.0.2",
   "private": true,
   "scripts": {
     "start": "node ./bin/www"
