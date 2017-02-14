@@ -4,7 +4,7 @@ const helmet = require('helmet')
 //# HELMET CONFIGS
 //============================================
 
-const helmetConfig = require('./../../config/helmet')
+const helmetConfig = require('./../../../config/helmet')
 
 //============================================
 //# HELMET OPERATIONS

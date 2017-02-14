@@ -2,7 +2,7 @@
 //# PROVIDERS CONFIG
 //============================================
 
-const providers = require('./../../config/app').providers
+const providers = require('./../../../config/app').providers
 
 //============================================
 //# EXPORTS

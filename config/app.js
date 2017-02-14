@@ -12,7 +12,7 @@ const config = {
 //# REGISTER PROVIDERS
 //============================================
 
-const providerPath = './../app/Providers/'
+const providerPath = './../app/Providers/System/'
 
 const providers = [
     require(providerPath + 'HelmetProvider'),

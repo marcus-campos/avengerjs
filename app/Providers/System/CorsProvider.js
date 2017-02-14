@@ -5,7 +5,7 @@ const cors = require('cors')
 //============================================
 
 // Configure whiteList
-const whiteList = ['http://localhost:3000', 'http://localhost:3001'];
+const whiteList = ['http://localhost:3000', 'http://localhost:3001']
 
 
 //============================================
@@ -13,23 +13,23 @@ const whiteList = ['http://localhost:3000', 'http://localhost:3001'];
 //============================================
 
 const corsOptionsDelegate = function(req, callback){
-  let corsOptions;
+  let corsOptions
 
   if(whiteList.indexOf(req.header('Origin')) !== -1) {
-      corsOptions = {origin: true}; // reflect (enable) the requested origin in the CORS response
+      corsOptions = {origin: true} // reflect (enable) the requested origin in the CORS response
   }
   else {
-      corsOptions = {origin: false}; // disable CORS for this request
+      corsOptions = {origin: false} // disable CORS for this request
   }
 
-  callback(null, corsOptions); // callback expects two parameters: error and options
-};
+  callback(null, corsOptions) // callback expects two parameters: error and options
+}
 
 //============================================
 //# EXPORTS
 //============================================
 
 module.exports = (app) => {
-    app.use(cors(corsOptionsDelegate));
-    return app;
+    app.use(cors(corsOptionsDelegate))
+    return app
 }

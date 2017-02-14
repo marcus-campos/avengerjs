@@ -12,10 +12,11 @@ const cookieParser   = require('cookie-parser')
 const bodyParser     = require('body-parser')
 
 // Configs
+require('dotenv').config()
 const appConfig      = require('./config/app').config
 
 // Register Providers
-app                  = require('./app/Providers/RegisterProviders')(app)
+app                  = require('./app/Providers/System/RegisterProviders')(app)
 
 
 // View engine setup
@@ -23,7 +24,7 @@ app.set('views', path.join(__dirname, appConfig('views')))
 app.set('view engine', 'jade')
 
 // Uncomment after placing your favicon in /public
-// app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+// app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
 app.use(logger('dev'))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
