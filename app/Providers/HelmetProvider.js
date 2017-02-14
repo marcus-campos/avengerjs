@@ -2,6 +2,9 @@ const helmet = require('helmet')
 const helmetConfig = require('./../../config/helmet')
 
 module.exports = (app) => {
+    // Use Helmet
+    app.use(helmet())
+
     // Disable Headers
     app.disable('x-powered-by')
 
