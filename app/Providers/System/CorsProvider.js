@@ -5,8 +5,7 @@ const cors = require('cors')
 //============================================
 
 // Configure whiteList
-const whiteList = ['http://localhost:3000', 'http://localhost:3001']
-
+const whiteList = require('./../../../config/cors')
 
 //============================================
 //# CORS OPERATIONS
