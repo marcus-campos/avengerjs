@@ -3,7 +3,8 @@
 //============================================
 
 const config = {
-    views: './app/Http/views'
+    views: '/app/Http/views/',
+    providers: '/app/Providers/'
 }
 
 module.exports = (conf) => {

@@ -4,7 +4,7 @@
 First download the base
 
 ```
-wget https://bitbucket.org/plugapps/plugframework/get/master.tar.gz
+wget https://github.com/marcus-campos/larexpress/archive/master.zip
 ```
 
 Extract base files

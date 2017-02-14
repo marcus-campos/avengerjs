@@ -12,13 +12,17 @@ const helmet       = require('helmet')
 
 // Configs
 const appConfig    = require('./config/app')
-const helmetConfig = require('./config/helmet')
+
+// Providers require
+const providersDir = __dirname + appConfig('providers'); // Path
+
+const helmetProvider = require(providersDir + 'HelmetProvider')
 
 // Routes requires
 const index        = require('./app/Http/routes/index')
 
 // App
-const app          = express()
+let app          = express()
 
 // View engine setup
 app.set('views', path.join(__dirname, appConfig('views')))
@@ -32,6 +36,9 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(cookieParser())
 app.use(express.static(path.join(__dirname, 'public')))
 app.use(helmet())
+
+//Set providers
+app = helmetProvider(app) //Helmet
 
 // Routes use
 app.use('/', index)
