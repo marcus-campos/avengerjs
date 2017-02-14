@@ -14,10 +14,16 @@ const appConfig      = require('./config/app')
 const providersDir   = __dirname + appConfig('providers'); // Path
 
 const helmetProvider = require(providersDir + 'HelmetProvider')
+const corsProvider   = require(providersDir + 'CorsProvider')
 const routesProvider = require(providersDir + 'RoutesProvider')
 
 // App
-let app          = express()
+let app              = express()
+
+//Set providers
+app                  = helmetProvider(app) //Helmet
+app                  = corsProvider(app)
+app                  = routesProvider(app)
 
 // View engine setup
 app.set('views', path.join(__dirname, appConfig('views')))
@@ -30,10 +36,6 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(cookieParser())
 app.use(express.static(path.join(__dirname, 'public')))
-
-//Set providers
-app = helmetProvider(app) //Helmet
-app = routesProvider(app)
 
 
 module.exports = app
