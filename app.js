@@ -1,4 +1,8 @@
 const express        = require('express')
+
+// App
+let app              = express()
+
 const path           = require('path')
 
 // Dependencies
@@ -8,22 +12,11 @@ const cookieParser   = require('cookie-parser')
 const bodyParser     = require('body-parser')
 
 // Configs
-const appConfig      = require('./config/app')
+const appConfig      = require('./config/app').config
 
-// Providers require
-const providersDir   = __dirname + appConfig('providers'); // Path
+// Register Providers
+app                  = require('./app/Providers/RegisterProviders')(app)
 
-const helmetProvider = require(providersDir + 'HelmetProvider')
-const corsProvider   = require(providersDir + 'CorsProvider')
-const routesProvider = require(providersDir + 'RoutesProvider')
-
-// App
-let app              = express()
-
-//Set providers
-app                  = helmetProvider(app) //Helmet
-app                  = corsProvider(app)
-app                  = routesProvider(app)
 
 // View engine setup
 app.set('views', path.join(__dirname, appConfig('views')))

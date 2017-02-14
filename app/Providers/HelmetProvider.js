@@ -1,7 +1,17 @@
 const helmet = require('helmet')
+
+//============================================
+//# HELMET CONFIGS
+//============================================
+
 const helmetConfig = require('./../../config/helmet')
 
-module.exports = (app) => {
+//============================================
+//# HELMET OPERATIONS
+//============================================
+
+function configAll(app) {
+
     // Use Helmet
     app.use(helmet())
 
@@ -25,7 +35,7 @@ module.exports = (app) => {
     app.use(helmet.hsts({
         maxAge: 7776000000,
         includeSubdomains: true
-    }));
+    }))
 
     // Sets "Referrer-Policy: same-origin".
     app.use(helmet.referrerPolicy({policy: 'same-origin'}))
@@ -39,5 +49,12 @@ module.exports = (app) => {
         sha256s: ['plU644p51=', 'zUk5tAtU5=']
     }))
 
-    return app;
+    return app
+}
+
+//============================================
+//# EXPORTS
+//============================================
+module.exports = (app) => {
+    return configAll(app)
 }

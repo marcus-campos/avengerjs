@@ -1,13 +1,8 @@
 const routes = require('./../Http/routes')
 
-module.exports = (app) => {
-    for(let key in routes)
-        app.use(routes[key].path, routes[key].route)
-
-    app = handler(app)
-    return app;
-}
-
+//============================================
+//# ROUTES OPERATIONS
+//============================================
 function handler(app) {
 
     // Catch 404 and forward to error handler
@@ -28,5 +23,17 @@ function handler(app) {
         res.render('error')
     })
 
+    return app;
+}
+
+//============================================
+//# EXPORTS
+//============================================
+
+module.exports = (app) => {
+    for(let key in routes)
+        app.use(routes[key].path, routes[key].route)
+
+    app = handler(app)
     return app;
 }
