@@ -4,7 +4,7 @@
 First download the base
 
 ```
-wget https://github.com/marcus-campos/larexpress/archive/master.zip
+wget https://github.com/marcus-campos/avengerjs/archive/master.zip
 ```
 
 Extract base files
