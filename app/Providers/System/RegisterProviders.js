@@ -3,6 +3,7 @@
 //============================================
 
 const providers = require('./../../../config/providers')
+const path = require('./../../../config/app')('providers')
 
 //============================================
 //# EXPORTS
@@ -17,10 +18,10 @@ const systemProviders = [
 module.exports = (app) => {
     // System
     for (let key in systemProviders)
-        app = require('./' + systemProviders[key])(app)
+        app = require('./../../../' + path + '/System/' + systemProviders[key])(app)
     // Human
     for (let key in providers)
-        app = require('./../' + providers[key])(app)
+        app = require('./../../../' + path + '/' + providers[key])(app)
 
     return app;
 }

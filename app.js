@@ -13,17 +13,14 @@ const bodyParser     = require('body-parser')
 
 // Configs
 require('dotenv').config()
-const appConfig      = require('./config/app')
+//const appConfig      = require('./config/app')
 
-router.use(function (req, res, next) {
-    console.log('hello')
-})
 // Register Providers
 app                  = require('./app/Providers/System/RegisterProviders')(app)
 
 
 // View engine setup
-// app.set('views', path.join(__dirname, appConfig('views')))
+// app.set('views', path.join(__dirname, '/' + appConfig('views')))
 // app.set('view engine', 'jade')
 
 // Uncomment after placing your favicon in /public
