@@ -3,10 +3,10 @@
 //============================================
 
 const config = {
-    views:      'app/Http/Views/',
-    routes:     'app/Http/routes/',
-    providers:  'app/Providers/',
-    middleware: 'app/Http/Middleware/',
+    views:      'app/Http/Views',
+    routes:     'app/Http/routes',
+    providers:  'app/Providers',
+    middleware: 'app/Http/Middleware',
 }
 
 //============================================
