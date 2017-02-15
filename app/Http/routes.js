@@ -1,6 +1,6 @@
 const routes = [
     // Index
-    {path: '/', route: require('./routes/index')}
+    {path: '/', route: 'index'}
 ]
 
 module.exports = routes

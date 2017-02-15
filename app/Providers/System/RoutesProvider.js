@@ -9,7 +9,7 @@ const routes = require('./../../Http/routes')
 * */
 function registerRoutes(app) {
     for(let key in routes) {
-        app.use(routes[key].path, routes[key].route)
+        app.use(routes[key].path, require('./../../Http/routes/' + routes[key].route))
     }
 
     return app
