@@ -3,6 +3,22 @@ const routes = require('./../../Http/routes')
 //============================================
 //# ROUTES OPERATIONS
 //============================================
+
+/*
+* Get the routes on routes.js and and register all on app
+* */
+function registerRoutes(app) {
+    for(let key in routes) {
+        app.use(routes[key].path, routes[key].route)
+    }
+
+    return app
+}
+
+/*
+* Register handlers on app
+* */
+
 function handler(app) {
 
     // Catch 404 and forward to error handler
@@ -36,9 +52,8 @@ function handler(app) {
 //============================================
 
 module.exports = (app) => {
-    for(let key in routes)
-        app.use(routes[key].path, routes[key].route)
-
+    app = registerRoutes(app)
     app = handler(app)
-    return app;
+
+    return app
 }
