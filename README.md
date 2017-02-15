@@ -1,3 +1,4 @@
+[![Code Climate](https://lima.codeclimate.com/github/marcus-campos/avengerjs/badges/gpa.svg)](https://lima.codeclimate.com/github/marcus-campos/avengerjs)
 # How to install
 
 ### Master
