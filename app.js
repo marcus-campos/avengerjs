@@ -13,10 +13,10 @@ const bodyParser     = require('body-parser')
 
 // Configs
 require('dotenv').config()
-//const appConfig      = require('./config/app')
+const providerPath   = require('./config/app')('providers')
 
 // Register Providers
-app                  = require('./app/Providers/System/RegisterProviders')(app)
+app                  = require('./' + providerPath + '/System/RegisterProviders')(app)
 
 
 // View engine setup
