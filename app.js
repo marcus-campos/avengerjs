@@ -1,5 +1,7 @@
+// Root Require
+require('./lib/AvengerJS/Requires/RootRequire')(__dirname)
+
 const express        = require('express')
-const router = express.Router()
 
 // App
 let app              = express()
@@ -13,10 +15,10 @@ const bodyParser     = require('body-parser')
 
 // Configs
 require('dotenv').config()
-const providerPath   = require('./config/app')('providers')
+const providerPath   = rootRequire('config/app')('providers')
 
 // Register Providers
-app                  = require('./' + providerPath + '/System/RegisterProviders')(app)
+app                  = rootRequire('lib/AvengerJS/Providers/RegisterProviders')(app)
 
 
 // View engine setup
@@ -29,6 +31,5 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(cookieParser())
 app.use(express.static(path.join(__dirname, 'public')))
-
 
 module.exports = app

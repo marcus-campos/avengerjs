@@ -22,7 +22,7 @@ npm install
 
 Now let's code :)
 
----
+-------
 
 If you want to contribute, send me one email: campos.v.marcus@gmail.com
 

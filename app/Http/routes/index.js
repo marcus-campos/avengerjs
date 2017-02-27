@@ -1,4 +1,4 @@
-const router = require('./../../../lib/Router')
+const router = getRouter();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
