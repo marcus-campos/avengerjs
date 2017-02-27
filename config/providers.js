@@ -4,7 +4,8 @@
 //============================================
 
 const providers = [
-    //'MyProvider'
+    'HelmetProvider',
+    'CorsProvider'
 ]
 
 module.exports = providers
