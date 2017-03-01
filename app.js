@@ -1,5 +1,5 @@
-// Root Require
-require('./lib/AvengerJS/Requires/RootRequire')(__dirname)
+// Helpers
+require('./lib/AvengerJS/Helpers/Helpers')(__dirname)
 
 const express        = require('express')
 

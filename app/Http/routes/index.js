@@ -1,4 +1,4 @@
-const router = getRouter();
+const router = aliasRequire('router');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {

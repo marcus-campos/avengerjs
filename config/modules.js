@@ -1,13 +1,18 @@
-
 /*
  |--------------------------------------------------------------------------
- | Register providers
+ | Modules
  |--------------------------------------------------------------------------
+ |
+ | This array contains the modules aliases and path
  */
-const providers = [
-    'HelmetProvider',
-    'CorsProvider'
-]
+
+const modules = {
+    // System Modules
+    router:  'lib/AvengerJS/Routes/Router',
+
+    //Developer Modules
+
+}
 
 /*
  |--------------------------------------------------------------------------
@@ -15,4 +20,4 @@ const providers = [
  |--------------------------------------------------------------------------
  */
 
-module.exports = providers
+module.exports = modules
