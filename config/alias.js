@@ -1,14 +1,15 @@
 /*
  |--------------------------------------------------------------------------
- | Modules
+ | Alias
  |--------------------------------------------------------------------------
  |
  | This array contains the modules aliases and path
  */
 
-const modules = {
+const alias = {
     // System Modules
-    router:  'lib/AvengerJS/Routes/Router',
+    router : 'lib/AvengerJS/Routes/Router',
+    db     : 'lib/AvengerJS/Database/DB'
 
     //Developer Modules
 
@@ -20,4 +21,4 @@ const modules = {
  |--------------------------------------------------------------------------
  */
 
-module.exports = modules
+module.exports = alias
