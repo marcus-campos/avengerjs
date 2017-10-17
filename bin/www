@@ -89,3 +89,15 @@ function onListening() {
     : 'port ' + addr.port
   debug('Listening on ' + bind)
 }
+
+
+/*
+ * System alert messages
+ */
+
+if(process.env.MAGIC_MSG === 'true')
+    console.log('[SYSTEM]: Magic happens on port:' + process.env.PORT)
+
+if(process.env.REQUIRE_CACHE === 'true')
+    console.log('[SYSTEM]: Require cache enabled')
+

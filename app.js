@@ -15,7 +15,6 @@ const bodyParser     = require('body-parser')
 
 // Configs
 require('dotenv').config()
-const providerPath   = rootRequire('config/app')('providers')
 
 // Register Providers
 app                  = rootRequire('lib/AvengerJS/Providers/RegisterProviders')(app)
